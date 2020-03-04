@@ -10,5 +10,6 @@ package lab05interfaces;
  * @author krigsdator
  */
 public interface CanTravel {
+
     public double move(double miles);
 }

@@ -11,11 +11,16 @@ package lab05interfaces;
  */
 public class SideJump implements CanTravel {
 
+    /**
+     *
+     * @param miles miles traveled
+     * @return the amount of time it takes to travel
+     */
     @Override
     public double move(double miles) {
-        double mph = miles/10;
+        double mph = miles / 10;
         System.out.println("Person Side-Jumps: " + miles);
         return mph;
     }
-    
+
 }

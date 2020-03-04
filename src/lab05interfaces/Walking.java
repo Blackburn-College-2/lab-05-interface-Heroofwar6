@@ -11,11 +11,16 @@ package lab05interfaces;
  */
 public class Walking implements CanTravel {
 
+    /**
+     *
+     * @param miles miles traveled
+     * @return the amount of time it takes to travel
+     */
     @Override
     public double move(double miles) {
-        double mph = miles/5.5;
+        double mph = miles / 5.5;
         System.out.println("Person walking: " + miles);
         return mph;
     }
-    
+
 }

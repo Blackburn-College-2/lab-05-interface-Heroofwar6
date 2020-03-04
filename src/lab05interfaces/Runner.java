@@ -10,59 +10,78 @@ package lab05interfaces;
  * @author krigsdator
  */
 public class Runner {
-    public static int hours(double time){
-        return (int)Math.floor(time);
+
+    /**
+     *
+     * @param time the time as a double
+     * @return returns the time in just hours
+     */
+    public static int hours(double time) {
+        return (int) Math.floor(time);
     }
-    public static int minutes(double time){
-        int hours = (int)Math.floor(time);
+
+    /**
+     *
+     * @param time the time as a double
+     * @return returns the time in minutes
+     */
+    public static int minutes(double time) {
+        int hours = (int) Math.floor(time);
         time = time - hours;
-        int minutes = (int)(60*time);
+        int minutes = (int) (60 * time);
         return minutes;
     }
-    public static void roundTrip(CanTravel travel, double distance){
+
+    /**
+     *
+     * @param travel the method of travel
+     * @param distance the distance traveled
+     */
+    public static void roundTrip(CanTravel travel, double distance) {
         System.out.println("Round Trip!");
         System.out.println("Leaving...");
         double time = travel.move(distance);
         int hours = hours(time);
         int minutes = minutes(time);
         String h = "";
-        if(hours > 1){
+        if (hours > 1) {
             h = "hours";
-        }else{
+        } else {
             h = "hour";
         }
         String m = "";
-        if(minutes > 1){
+        if (minutes > 1) {
             m = "minutes";
-        }else{
+        } else {
             m = "minute";
         }
-        System.out.println("It takes: " + hours + " " + h 
+        System.out.println("It takes: " + hours + " " + h
                 + " and " + minutes + " " + m + ".");
         System.out.println("Returning...");
         double rtime = travel.move(distance);
         int rhour = hours(rtime);
         int rminute = minutes(rtime);
         h = "";
-        if(rhour > 1){
+        if (rhour > 1) {
             h = "hours";
-        }else{
+        } else {
             h = "hour";
         }
         m = "";
-        if(rminute > 1){
+        if (rminute > 1) {
             m = "minutes";
-        }else{
+        } else {
             m = "minute";
         }
-        System.out.println("It takes: " + hours + " " + h 
+        System.out.println("It takes: " + hours + " " + h
                 + " and " + minutes + " " + m + ".");
         int fhour = rhour + hours;
         int fminute = rminute + minutes;
         System.out.println("It takes: " + fhour + " hours "
                 + " and " + fminute + " minutes. \n");
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Walking walk = new Walking();
         Bicycle bike = new Bicycle();
         Plane plane = new Plane();
@@ -77,6 +96,6 @@ public class Runner {
         roundTrip(car, 1000.0);
         roundTrip(rS, 1000.0);
         roundTrip(sJ, 1000.0);
-        
+
     }
 }

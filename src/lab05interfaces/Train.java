@@ -11,11 +11,16 @@ package lab05interfaces;
  */
 public class Train implements CanTravel {
 
+    /**
+     *
+     * @param miles miles traveled
+     * @return the amount of time it takes to travel
+     */
     @Override
     public double move(double miles) {
-        double mph = miles/50 + 0.50;
+        double mph = miles / 50 + 0.50;
         System.out.println("Plane flying: " + miles);
         return mph;
     }
-    
+
 }

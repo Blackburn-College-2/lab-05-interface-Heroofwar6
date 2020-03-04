@@ -11,11 +11,16 @@ package lab05interfaces;
  */
 public class Plane implements CanTravel {
 
+    /**
+     *
+     * @param miles miles traveled
+     * @return the amount of time it takes to travel
+     */
     @Override
     public double move(double miles) {
-        double mph = miles/450 + 1;
+        double mph = miles / 450 + 1;
         System.out.println("Plane flying: " + miles);
         return mph;
     }
-    
+
 }

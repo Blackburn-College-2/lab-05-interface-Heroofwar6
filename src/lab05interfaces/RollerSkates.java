@@ -10,7 +10,11 @@ package lab05interfaces;
  * @author krigsdator
  */
 public class RollerSkates implements CanTravel {
-
+    /**
+     *
+     * @param miles miles traveled
+     * @return the amount of time it takes to travel
+     */
     @Override
     public double move(double miles) {
         double check = miles;

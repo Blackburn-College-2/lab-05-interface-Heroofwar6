@@ -11,18 +11,23 @@ package lab05interfaces;
  */
 public class Car implements CanTravel {
 
+    /**
+     *
+     * @param miles miles traveled
+     * @return the amount of time it takes to travel
+     */
     @Override
     public double move(double miles) {
         double check = miles;
         int i = 0;
-        while (check > 0){
+        while (check > 0) {
             check -= miles;
             i++;
         }
         double minutes = i * 0.20;
-        double mph = miles/60 + minutes;
+        double mph = miles / 60 + minutes;
         System.out.println("Car drives: " + miles);
         return mph;
     }
-    
+
 }
